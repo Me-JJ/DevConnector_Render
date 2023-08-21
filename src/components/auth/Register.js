@@ -31,7 +31,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
   if (isAuthenticated) {
     // return redirect("/dashboard");
-    window.location.replace("http://localhost:3000/dashboard");
+    window.location.replace(
+      "https://dev-connector-zz9j.onrender.com/dashboard"
+    );
   }
   return (
     <section className="container">
