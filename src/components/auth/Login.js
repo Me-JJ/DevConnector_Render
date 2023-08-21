@@ -26,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   //redirect if logged in
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="https://dev-connector-zz9j.onrender.com/dashboard" />;
   }
   return (
     <section className="container">
