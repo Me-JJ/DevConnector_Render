@@ -260,7 +260,7 @@ const ProfileForm = ({
         <input type="submit" className="btn btn-primary my-1" />
         <Link
           className="btn btn-light my-1"
-          to="http://localhost:3000/dashboard"
+          to="https://dev-connector-zz9j.onrender.com/dashboard"
         >
           Go Back
         </Link>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
@@ -31,9 +31,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
   if (isAuthenticated) {
     // return redirect("/dashboard");
-    window.location.replace(
-      "https://dev-connector-zz9j.onrender.com/dashboard"
-    );
+    return <Navigate to="/dashboard" />;
   }
   return (
     <section className="container">
