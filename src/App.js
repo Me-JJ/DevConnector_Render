@@ -52,10 +52,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="https://dev-connector-zz9j.onrender.com/login"
-            element={<Login />}
-          />
+          <Route path="/login" element={<Login />} />
           <Route path="/profiles" element={<Profiles />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route

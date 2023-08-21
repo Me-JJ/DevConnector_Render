@@ -74,11 +74,6 @@ export const register =
 export const login =
   ({ email, password }) =>
   async (dispatch) => {
-    const config = {
-      header: {
-        "Content-Type": "application/json",
-      },
-    };
     const body = {
       email,
       password,
@@ -87,8 +82,7 @@ export const login =
       // console.log("body->", body);
       const res = await api.post(
         "https://connect-api-1fm9.onrender.com/api/auth",
-        body,
-        config
+        body
       );
       dispatch({
         type: LOGIN_SUCCESS,
