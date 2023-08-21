@@ -14,7 +14,9 @@ import {
 // GET POSTS
 export const getPosts = () => async (dispatch) => {
   try {
-    const res = await api.get("https://devConnect-api.onrender.com/api/posts");
+    const res = await api.get(
+      "https://connect-api-1fm9.onrender.com/api/posts"
+    );
 
     dispatch({
       type: GET_POSTS,
@@ -32,7 +34,7 @@ export const getPosts = () => async (dispatch) => {
 export const addLike = (id) => async (dispatch) => {
   try {
     const res = await api.put(
-      `https://devConnect-api.onrender.com/api/posts/like/${id}`
+      `https://connect-api-1fm9.onrender.com/api/posts/like/${id}`
     );
 
     dispatch({
@@ -51,7 +53,7 @@ export const addLike = (id) => async (dispatch) => {
 export const removeLike = (id) => async (dispatch) => {
   try {
     const res = await api.put(
-      `https://devConnect-api.onrender.com/api/posts/unlike/${id}`
+      `https://connect-api-1fm9.onrender.com/api/posts/unlike/${id}`
     );
     // console.log("removelike->", res.data);
     dispatch({
@@ -70,7 +72,7 @@ export const removeLike = (id) => async (dispatch) => {
 //delete post
 export const deletePost = (id) => async (dispatch) => {
   try {
-    await api.delete(`https://devConnect-api.onrender.com/api/posts/${id}`);
+    await api.delete(`https://connect-api-1fm9.onrender.com/api/posts/${id}`);
 
     dispatch({
       type: DELETE_POST,
@@ -91,7 +93,7 @@ export const deletePost = (id) => async (dispatch) => {
 export const addPost = (formData) => async (dispatch) => {
   try {
     const res = await api.post(
-      `https://devConnect-api.onrender.com/api/posts/`,
+      `https://connect-api-1fm9.onrender.com/api/posts/`,
       formData
     );
     // console.log("removelike->", res.data);
@@ -114,7 +116,7 @@ export const addPost = (formData) => async (dispatch) => {
 export const getPost = (id) => async (dispatch) => {
   try {
     const res = await api.get(
-      `https://devConnect-api.onrender.com/api/posts/${id}`
+      `https://connect-api-1fm9.onrender.com/api/posts/${id}`
     );
 
     dispatch({
@@ -134,7 +136,7 @@ export const getPost = (id) => async (dispatch) => {
 export const addComment = (postId, formData) => async (dispatch) => {
   try {
     const res = await api.post(
-      `https://devConnect-api.onrender.com/api/posts/comment/${postId}`,
+      `https://connect-api-1fm9.onrender.com/api/posts/comment/${postId}`,
       formData
     );
 
@@ -157,7 +159,7 @@ export const addComment = (postId, formData) => async (dispatch) => {
 export const deleteComment = (postId, commentId) => async (dispatch) => {
   try {
     await api.delete(
-      `https://devConnect-api.onrender.com/api/posts/comment/${postId}/${commentId}`
+      `https://connect-api-1fm9.onrender.com/api/posts/comment/${postId}/${commentId}`
     );
     dispatch({
       type: REMOVE_COMMENT,

@@ -17,7 +17,7 @@ import {
 export const getCurrentProfile = () => async (dispatch) => {
   try {
     const res = await api.get(
-      "https://devConnect-api.onrender.com/api/profile/me"
+      "https://connect-api-1fm9.onrender.com/api/profile/me"
     );
     dispatch({
       type: GET_PROFILE,
@@ -37,7 +37,7 @@ export const getProfiles = () => async (dispatch) => {
   dispatch({ type: CLEAR_PROFILE });
   try {
     const res = await api.get(
-      "https://devConnect-api.onrender.com/api/profile"
+      "https://connect-api-1fm9.onrender.com/api/profile"
     );
     dispatch({
       type: GET_PROFILES,
@@ -56,7 +56,7 @@ export const getProfiles = () => async (dispatch) => {
 export const getProfileByID = (userId) => async (dispatch) => {
   try {
     const res = await api.get(
-      `https://devConnect-api.onrender.com/api/profile/user/${userId}`
+      `https://connect-api-1fm9.onrender.com/api/profile/user/${userId}`
     );
     dispatch({
       type: GET_PROFILE,
@@ -76,7 +76,7 @@ export const getGithubRepos = (username) => async (dispatch) => {
   try {
     // console.log("username->", username);
     const res = await api.get(
-      `https://devConnect-api.onrender.com/api/profile/github/${username}`
+      `https://connect-api-1fm9.onrender.com/api/profile/github/${username}`
     );
 
     dispatch({
@@ -97,7 +97,7 @@ export const createProfile =
     // console.log("formadata=", formData);
     try {
       const res = await api.post(
-        "https://devConnect-api.onrender.com/api/profile",
+        "https://connect-api-1fm9.onrender.com/api/profile",
         formData
       );
       // console.log("res->data after post-> ", res.data);
@@ -129,7 +129,7 @@ export const createProfile =
 export const addExperience = (formData) => async (dispatch) => {
   try {
     const res = await api.put(
-      "https://devConnect-api.onrender.com/api/profile/experience",
+      "https://connect-api-1fm9.onrender.com/api/profile/experience",
       formData
     );
 
@@ -158,7 +158,7 @@ export const addExperience = (formData) => async (dispatch) => {
 export const addEducation = (formData) => async (dispatch) => {
   try {
     const res = await api.put(
-      "https://devConnect-api.onrender.com/api/profile/education",
+      "https://connect-api-1fm9.onrender.com/api/profile/education",
       formData
     );
 
@@ -186,7 +186,7 @@ export const addEducation = (formData) => async (dispatch) => {
 export const deleteExperience = (id) => async (dispatch) => {
   try {
     const res = await api.delete(
-      `https://devConnect-api.onrender.com/api/profile/experience/${id}`
+      `https://connect-api-1fm9.onrender.com/api/profile/experience/${id}`
     );
 
     dispatch({
@@ -207,7 +207,7 @@ export const deleteExperience = (id) => async (dispatch) => {
 export const deleteEducation = (id) => async (dispatch) => {
   try {
     const res = await api.delete(
-      `https://devConnect-api.onrender.com/api/profile/education/${id}`
+      `https://connect-api-1fm9.onrender.com/api/profile/education/${id}`
     );
 
     dispatch({
@@ -228,7 +228,7 @@ export const deleteEducation = (id) => async (dispatch) => {
 export const deleteAccount = () => async (dispatch) => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
     try {
-      await api.delete(`https://devConnect-api.onrender.com/api/profile`);
+      await api.delete(`https://connect-api-1fm9.onrender.com/api/profile`);
 
       dispatch({
         type: CLEAR_PROFILE,

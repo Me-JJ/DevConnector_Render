@@ -15,7 +15,7 @@ import { setAlert } from "./alert";
 export const loadUser = () => async (dispatch) => {
   // console.log(localStorage);
   try {
-    const res = await api.get("https://devConnect-api.onrender.com/api/auth");
+    const res = await api.get("https://connect-api-1fm9.onrender.com/api/auth");
     // console.log("res->data=>", res.data);
     dispatch({
       type: USER_LOADED,
@@ -45,7 +45,7 @@ export const register =
     try {
       //   console.log("body->", body);
       const res = await api.post(
-        "https://devConnect-api.onrender.com/api/users",
+        "https://connect-api-1fm9.onrender.com/api/users",
         body,
         config
       );
@@ -86,7 +86,7 @@ export const login =
     try {
       // console.log("body->", body);
       const res = await api.post(
-        "https://devConnect-api.onrender.com/api/auth",
+        "https://connect-api-1fm9.onrender.com/api/auth",
         body,
         config
       );
